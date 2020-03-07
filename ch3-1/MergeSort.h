@@ -70,16 +70,16 @@ void MergeSort<Type>::Merge(Type result[], int from, int middle, int to)
  **    to : 待排结束元素下标
 */
 template<class Type>
-void MergeSort<Type>::Sort(Type origin[], Type result[], int from, int to)
+void MergeSort<Type>::
+Sort(Type origin[], Type result[], int from, int to)
 {
-    if (from == to)
-        result[from] = origin[from];    //只有一个元素，直接赋值
-    else {
+    if (from == to) // 只有一个元素，直接赋值
+        result[from] = origin[from];    
+    else { // 多个元素，分治
         int m;
         m = (from + to) / 2;
-        Sort(origin, result, from, m);    //归并排序前半个子序列
-        Sort(origin, result, m + 1, to);   //归并排序后半个子序列
-        Merge(result, from, m, to);      //合并两个已排序的子序列
+        Sort(origin, result, from, m);    // 归并排序前半个子序列
+        Sort(origin, result, m + 1, to);  // 归并排序后半个子序列
+        Merge(result, from, m, to);       // 合并两个已排序的子序列
     }
-
 }
