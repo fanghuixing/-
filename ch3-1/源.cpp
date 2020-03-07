@@ -1,7 +1,13 @@
 #include <iostream>
 #include "源.h"
-using std::cout;
 
+/**
+ ** 二分归并排序
+ **  origin： 原数组
+ **  result： 排序后有序数组
+ **  from : 待排起始元素下标
+ **    to : 待排结束元素下标
+*/
 void MergeSort(int origin[], int result[], int from, int to)
 {
     if (from == to) 
@@ -15,6 +21,13 @@ void MergeSort(int origin[], int result[], int from, int to)
     }
 }
 
+/**
+ ** 合并result数组中两个子序列
+ ** 两个子序列下标分别为
+ ** 1： from ~ middle  
+ ** 2： middle + 1 ~ to
+ ** 合并后的结果仍然存放在result中
+*/
 void Merge(int result[], int from, int middle, int to)
 {
     int size = to - from + 1; // 待合并元素总数
@@ -25,7 +38,7 @@ void Merge(int result[], int from, int middle, int to)
     // j: 第二个子序列的下标
     // k: 临时空间temp的下标
 
-
+    // 循环，每次迭代选取一个最小元存放到temp中
     while (true) {
 
         if (result[i] <= result[j])     
@@ -49,7 +62,10 @@ void Merge(int result[], int from, int middle, int to)
             memcpy(&(temp[k]), &(result[rFrom]), rByteSize);
             break;
         }
-    }
+
+        // 如果两个子序列都有元素，则继续迭代
+
+    } // while结束
 
     // 将temp中所有（已排好序）元素拷贝回result
     memcpy(&(result[from]), temp, size * sizeof(int));  
@@ -57,13 +73,3 @@ void Merge(int result[], int from, int middle, int to)
     delete[] temp; // 释放临时空间
 }
 
-int main() {
-    int origin[8] = {60, 20, 31, 5, 44, 55, 65, 0};
-    int result[8];
-    MergeSort(origin, result, 0, 7);
-
-    for(int val : result)
-    {
-        cout << val << "\t";
-    }
-}
