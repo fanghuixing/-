@@ -20,7 +20,7 @@ void MergeSort<Type>::Merge(Type result[], int from, int middle, int to)
 {
 
     int size = to - from + 1; // 待合并元素总数
-    int* temp = new int[size]; // 申请临时空间存储合并结果
+    Type* temp = new Type[size]; // 申请临时空间存储合并结果
 
     int  i = from, j = middle + 1, k = 0;
     // i: 第一个子序列的下标

@@ -5,15 +5,15 @@ using std::endl;
 
 int main() {
     // 测试数据
-    int origin[8] = { 60, 20, 31, 5, 44, 55, 65, 0 };
-    int result[8];
+    double origin[8] = { 60.4, 20.9, 31.1, 5.5, 44.3, 55.8, 65.1, 0.2 };
+    double result[8];
 
-    MergeSort<int> ms;
+    MergeSort<double> ms;
 
     ms.Sort(origin, result, 0, 7);
 
     // 打印结果
-    for (int val : result)
+    for (double val : result)
     {
         cout << val << "\t";
     }
