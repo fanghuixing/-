@@ -28,33 +28,27 @@ void MergeSort<Type>::Merge(Type result[], int from, int middle, int to)
     // k: 临时空间temp的下标
 
     // 循环，每次迭代选取一个最小元存放到temp中
-    while (true) {
-
+    while ( i <= middle && j <= to ) {
         if (result[i] <= result[j])
             temp[k++] = result[i++];
         else
             temp[k++] = result[j++];
-
-        if (i > middle) // 只剩下 第二个子序列了
-        {
-            // 剩余元素的起始下标rFrom
-            // 剩余元素的字节数rByteSize
-            int rFrom = j, rByteSize = (to - j + 1) * sizeof(Type);
-            memcpy(&(temp[k]), &(result[rFrom]), rByteSize);
-            break;
-        }
-        else if (j > to) // 只剩下 第一个子序列了
-        {
-            // 剩余元素的起始下标rFrom
-            // 剩余元素的字节数rByteSize
-            int rFrom = i, rByteSize = (middle - i + 1) * sizeof(Type);
-            memcpy(&(temp[k]), &(result[rFrom]), rByteSize);
-            break;
-        }
-
-        // 如果两个子序列都有元素，则继续迭代
-
     } // while结束
+
+    if (i > middle) // 只剩下第二个子序列了
+    {
+        // 剩余元素的起始下标rFrom
+        // 剩余元素的字节数rByteSize
+        int rFrom = j, rByteSize = (to - j + 1) * sizeof(Type);
+        memcpy(&(temp[k]), &(result[rFrom]), rByteSize);        
+    }
+    else if (j > to) // 只剩下 第一个子序列了
+    {
+        // 剩余元素的起始下标rFrom
+        // 剩余元素的字节数rByteSize
+        int rFrom = i, rByteSize = (middle - i + 1) * sizeof(Type);
+        memcpy(&(temp[k]), &(result[rFrom]), rByteSize);
+    }
 
     // 将temp中所有（已排好序）元素拷贝回result
     memcpy(&(result[from]), temp, size * sizeof(Type));
@@ -83,3 +77,5 @@ Sort(Type origin[], Type result[], int from, int to)
         Merge(result, from, m, to);       // 合并两个已排序的子序列
     }
 }
+
+
