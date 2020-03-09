@@ -5,13 +5,15 @@ VisualStudioVersion = 16.0.29806.167
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch2", "ch2\ch2.vcxproj", "{944FE245-BE6A-4E0D-90DA-6CE437B586FC}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch3-1", "ch3-1\ch3-1.vcxproj", "{D0D4975E-BF31-4458-A56D-EE7E1AC807C0}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch3-1-MergeSort", "ch3-1\ch3-1.vcxproj", "{D0D4975E-BF31-4458-A56D-EE7E1AC807C0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch3-2", "ch3-2\ch3-2.vcxproj", "{D5F5B63D-1F43-49D9-BDAD-47ECCB77CC3B}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch3-2-quickSort", "ch3-2\ch3-2.vcxproj", "{D5F5B63D-1F43-49D9-BDAD-47ECCB77CC3B}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch3-3-binarysearch", "ch2-3-binarysearch\ch2-3-binarysearch.vcxproj", "{545E4FE7-7A5A-4B59-BCCA-3DB5FC981658}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch3-3-2", "ch3-3-2\ch3-3-2.vcxproj", "{9B0A57B4-EAC2-42EA-9A2D-CC47598C3E16}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ch3-3-2-Select-k-small", "ch3-3-2\ch3-3-2.vcxproj", "{9B0A57B4-EAC2-42EA-9A2D-CC47598C3E16}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "3-4-1-MaxSubSum", "3-4-1-MaxSubSum\3-4-1-MaxSubSum.vcxproj", "{0D1DCDD5-430C-4052-92CF-8223CA688924}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +63,14 @@ Global
 		{9B0A57B4-EAC2-42EA-9A2D-CC47598C3E16}.Release|x64.Build.0 = Release|x64
 		{9B0A57B4-EAC2-42EA-9A2D-CC47598C3E16}.Release|x86.ActiveCfg = Release|Win32
 		{9B0A57B4-EAC2-42EA-9A2D-CC47598C3E16}.Release|x86.Build.0 = Release|Win32
+		{0D1DCDD5-430C-4052-92CF-8223CA688924}.Debug|x64.ActiveCfg = Debug|x64
+		{0D1DCDD5-430C-4052-92CF-8223CA688924}.Debug|x64.Build.0 = Debug|x64
+		{0D1DCDD5-430C-4052-92CF-8223CA688924}.Debug|x86.ActiveCfg = Debug|Win32
+		{0D1DCDD5-430C-4052-92CF-8223CA688924}.Debug|x86.Build.0 = Debug|Win32
+		{0D1DCDD5-430C-4052-92CF-8223CA688924}.Release|x64.ActiveCfg = Release|x64
+		{0D1DCDD5-430C-4052-92CF-8223CA688924}.Release|x64.Build.0 = Release|x64
+		{0D1DCDD5-430C-4052-92CF-8223CA688924}.Release|x86.ActiveCfg = Release|Win32
+		{0D1DCDD5-430C-4052-92CF-8223CA688924}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
